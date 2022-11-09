@@ -1,9 +1,8 @@
 const express = require('express');
+const routes= require("./src/routes");
 const app = express();
 const port = 3000;
-app.get('/',(req,res)=>{
-    res.send("am here");
-})
+app.use('/api/v1/data',routes);
 
 
 app.listen(port,()=>console.log(`App is running on ${port}`));
